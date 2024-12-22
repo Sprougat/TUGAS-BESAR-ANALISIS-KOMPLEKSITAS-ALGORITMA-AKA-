@@ -49,6 +49,17 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 # Analisis
 ![grafik](https://github.com/user-attachments/assets/274f1dcf-6e39-4c7e-90a3-30bbabe040af)
 
+Struktur Algoritma dan Kompleksitas*
+- *Merge Sort Iteratif (Ascending)*:
+  - Implementasi berbasis looping dengan menggunakan ukuran subarray yang bertambah secara eksponensial (\(size = 1, 2, 4, \dots\)) hingga seluruh array terurut.
+  - Kompleksitas waktu tetap \(O(n \log n)\), karena setiap elemen diproses dalam logaritmik jumlah penggabungan subarray.
+  - Kompleksitas ruang lebih rendah dibandingkan versi rekursif, karena hanya memerlukan array sementara (temp) untuk menyimpan hasil penggabungan.
+
+- *Merge Sort Rekursif (Descending)*:
+  - Implementasi berbasis pemanggilan fungsi rekursif. Array dibagi dua secara terus-menerus hingga menjadi unit terkecil (subarray berukuran 1), kemudian digabungkan kembali.
+  - Kompleksitas waktu juga \(O(n \log n)\), karena proses pemecahan dan penggabungan subarray sama seperti versi iteratif.
+  - Kompleksitas ruang lebih tinggi karena memanfaatkan call stack untuk menyimpan status tiap panggilan fungsi. Kompleksitas ruang tambahan ini adalah \(O(\log n)\).
+
 # Hasil Perbandingan
 
 Merge Sort Iteratif (Ascending): Memiliki waktu eksekusi lebih lama.
