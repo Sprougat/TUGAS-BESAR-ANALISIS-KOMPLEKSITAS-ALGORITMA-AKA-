@@ -48,3 +48,5 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 Merge Sort Iteratif (Ascending): Memiliki waktu eksekusi lebih lama.
 Merge Sort Rekursif (Descending): Lebih cepat dalam pengujian ini.
 
+# Analisis
+
