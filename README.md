@@ -3,6 +3,7 @@ Perbandingan Kinerja Algoritma Quick Sort (Iteratif) dan Merge Sort (Rekursif) d
 
 **ANGGOTA KELOMPOK**
 - Rafaldo Al Maqdis (2311102099)
+- Naufal Geraldo Putra Pramudianartono (2311102154)
 
 Kelas: IF-11-4
 Program Studi Teknik Informatika
