@@ -1,5 +1,5 @@
 # TUGAS-BESAR-ANALISIS-KOMPLEKSITAS-ALGORITMA-AKA-
-Perbandingan Kinerja Algoritma Quick Sort (Iteratif) dan Merge Sort (Rekursif) dalam Pengurutan Produk Marketplace
+Perbandingan Kinerja Algoritma Merge Sort (Iteratif dan Rekursif) dalam Pengurutan Produk Marketplace
 
 **ANGGOTA KELOMPOK**
 - Rafaldo Al Maqdis (2311102099)
@@ -8,3 +8,5 @@ Perbandingan Kinerja Algoritma Quick Sort (Iteratif) dan Merge Sort (Rekursif) d
 Kelas: IF-11-4
 Program Studi Teknik Informatika
 Telkom University Purwokerto
+
+
