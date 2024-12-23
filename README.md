@@ -50,7 +50,15 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 ---
 
 ## 5. Output
-![output](https://github.com/user-attachments/assets/9a4e2599-0482-4017-9ec6-e8e6a481eaf7)
+![image](https://github.com/user-attachments/assets/ba4016ec-402e-4400-9e2a-f6fc25770c86)
+
+![image](https://github.com/user-attachments/assets/2b65362e-68a1-46ff-9714-b408f1625301)
+
+Grafik
+
+![image](https://github.com/user-attachments/assets/dac9e8a4-6e44-4791-a027-7f6571da4958)
+
+
 
 ---
 
