@@ -87,25 +87,24 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 
 ![image](https://github.com/user-attachments/assets/2b65362e-68a1-46ff-9714-b408f1625301)
 
-Grafik
-
-![image](https://github.com/user-attachments/assets/dac9e8a4-6e44-4791-a027-7f6571da4958)
-
-
-
 ---
 
 ## 6. Analisis
-![grafik](https://github.com/user-attachments/assets/274f1dcf-6e39-4c7e-90a3-30bbabe040af)
+
+![image](https://github.com/user-attachments/assets/dac9e8a4-6e44-4791-a027-7f6571da4958)
 
 ### Struktur Algoritma dan Kompleksitas
-- **Merge Sort Iteratif (Ascending)**:
-  - Implementasi berbasis looping dengan menggunakan ukuran subarray yang bertambah secara eksponensial (\(size = 1, 2, 4, \dots\)) hingga seluruh array terurut.
-  - **Kompleksitas waktu**: \(O(n \log n)\), karena setiap elemen diproses dalam logaritmik jumlah penggabungan subarray.
-  - **Kompleksitas ruang**: Lebih rendah dibandingkan versi rekursif, karena hanya memerlukan array sementara (temp) untuk menyimpan hasil penggabungan.
+ # Kompleksitas Waktu
 
-- **Merge Sort Rekursif (Descending)**:
-  - Implementasi berbasis pemanggilan fungsi rekursif. Array dibagi dua secara terus-menerus hingga menjadi unit
+Merge Sort memiliki kompleksitas waktu sebagai berikut:
+
+- Best Case: O(n log n)
+
+- Worst Case: O(n log n)
+
+- Average Case: O(n log n)
+
+Kompleksitas ruang tambahan adalah O(n) karena diperlukan array temporer untuk penggabungan data.
 
 Dalam perbandingan kinerja antara Merge Sort Iteratif dan Merge Sort Rekursif, kedua algoritma memiliki kompleksitas waktu yang sama, yaitu (O(n \log n)), namun kinerja praktisnya dapat bervariasi tergantung pada ukuran dataset. Merge Sort Iteratif cenderung lebih efisien pada dataset besar karena menghindari overhead pemanggilan fungsi yang ada pada Merge Sort Rekursif, yang dapat menyebabkan penurunan kinerja akibat penggunaan stack frame tambahan. Meskipun Merge Sort Rekursif lebih mudah dipahami dan diimplementasikan, terutama untuk dataset kecil, penggunaan memori yang lebih tinggi dan potensi stack overflow pada dataset besar menjadikannya kurang ideal dalam konteks aplikasi nyata. Oleh karena itu, untuk aplikasi yang memerlukan kecepatan dan efisiensi, terutama dalam pengurutan produk di marketplace, Merge Sort Iteratif adalah pilihan yang lebih baik, sedangkan Merge Sort Rekursif lebih sesuai untuk tujuan pendidikan dan pemahaman konsep dasar algoritma.
  
