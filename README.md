@@ -67,3 +67,4 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
   - Implementasi berbasis pemanggilan fungsi rekursif. Array dibagi dua secara terus-menerus hingga menjadi unit
  
 ### Kesimpulan
+Merge Sort Iteratif lebih efisien pada dataset besar karena overhead rekursif dapat dihindari. Sementara itu, Merge Sort Rekursif lebih cepat pada dataset kecil karena overhead pemanggilan fungsi tidak signifikan. Pemilihan algoritma yang tepat bergantung pada ukuran dataset dan efisiensi memori yang dibutuhkan.
