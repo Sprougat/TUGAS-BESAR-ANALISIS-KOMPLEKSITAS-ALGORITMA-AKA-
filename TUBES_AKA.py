@@ -117,76 +117,82 @@ if __name__ == "__main__":
     print("=== Input Produk ===")
     products = input_products()
 
-    # Duplikasi data untuk keempat algoritma
-    data_iterative_asc = products.copy()
-    data_iterative_desc = products.copy()
-    data_recursive_asc = products.copy()
-    data_recursive_desc = products.copy()
+    # Duplikasi data untuk pengujian
+    data_iterative_price = products.copy()
+    data_recursive_price = products.copy()
+    data_iterative_rating = products.copy()
+    data_recursive_rating = products.copy()
 
-    # Mengukur waktu eksekusi masing-masing algoritma
-    iterative_asc_duration, iterative_asc_result = measure_time(
-        merge_sort_iterative, data_iterative_asc, by="price", ascending=True, is_recursive=False
+    # Mengukur waktu eksekusi Merge Sort Iteratif (Ascending, Harga)
+    iterative_price_duration, iterative_price_result = measure_time(
+        merge_sort_iterative, data_iterative_price, by="price", ascending=True, is_recursive=False
     )
 
-    iterative_desc_duration, iterative_desc_result = measure_time(
-        merge_sort_iterative, data_iterative_desc, by="price", ascending=False, is_recursive=False
+    # Mengukur waktu eksekusi Merge Sort Rekursif (Descending, Harga)
+    recursive_price_duration, recursive_price_result = measure_time(
+        merge_sort_recursive, data_recursive_price, by="price", ascending=False, is_recursive=True
     )
 
-    recursive_asc_duration, recursive_asc_result = measure_time(
-        merge_sort_recursive, data_recursive_asc, by="price", ascending=True, is_recursive=True
+    # Mengukur waktu eksekusi Merge Sort Iteratif (Ascending, Rating)
+    iterative_rating_duration, iterative_rating_result = measure_time(
+        merge_sort_iterative, data_iterative_rating, by="rating", ascending=True, is_recursive=False
     )
 
-    recursive_desc_duration, recursive_desc_result = measure_time(
-        merge_sort_recursive, data_recursive_desc, by="price", ascending=False, is_recursive=True
+    # Mengukur waktu eksekusi Merge Sort Rekursif (Descending, Rating)
+    recursive_rating_duration, recursive_rating_result = measure_time(
+        merge_sort_recursive, data_recursive_rating, by="rating", ascending=False, is_recursive=True
     )
 
-    # Menampilkan hasil
+    # Menampilkan hasil untuk Harga
     print("\n=== Hasil Merge Sort Iteratif (Ascending, Harga) ===")
-    print(f"Waktu eksekusi: {iterative_asc_duration:.6f} detik")
-    for product in iterative_asc_result:
-        print(f"{product.name}: {product.price}, Rating: {product.rating}")
-
-    print("\n=== Hasil Merge Sort Iteratif (Descending, Harga) ===")
-    print(f"Waktu eksekusi: {iterative_desc_duration:.6f} detik")
-    for product in iterative_desc_result:
-        print(f"{product.name}: {product.price}, Rating: {product.rating}")
-
-    print("\n=== Hasil Merge Sort Rekursif (Ascending, Harga) ===")
-    print(f"Waktu eksekusi: {recursive_asc_duration:.6f} detik")
-    for product in recursive_asc_result:
+    print(f"Waktu eksekusi: {iterative_price_duration:.6f} detik")
+    for product in iterative_price_result:
         print(f"{product.name}: {product.price}, Rating: {product.rating}")
 
     print("\n=== Hasil Merge Sort Rekursif (Descending, Harga) ===")
-    print(f"Waktu eksekusi: {recursive_desc_duration:.6f} detik")
-    for product in recursive_desc_result:
+    print(f"Waktu eksekusi: {recursive_price_duration:.6f} detik")
+    for product in recursive_price_result:
+        print(f"{product.name}: {product.price}, Rating: {product.rating}")
+
+    # Menampilkan hasil untuk Rating
+    print("\n=== Hasil Merge Sort Iteratif (Ascending, Rating) ===")
+    print(f"Waktu eksekusi: {iterative_rating_duration:.6f} detik")
+    for product in iterative_rating_result:
+        print(f"{product.name}: {product.price}, Rating: {product.rating}")
+
+    print("\n=== Hasil Merge Sort Rekursif (Descending, Rating) ===")
+    print(f"Waktu eksekusi: {recursive_rating_duration:.6f} detik")
+    for product in recursive_rating_result:
         print(f"{product.name}: {product.price}, Rating: {product.rating}")
 
     # Menampilkan perbandingan waktu eksekusi dalam bentuk tabel
     table_data = [
-        ["Merge Sort Iteratif (Ascending)", f"{iterative_asc_duration:.6f} detik"],
-        ["Merge Sort Iteratif (Descending)", f"{iterative_desc_duration:.6f} detik"],
-        ["Merge Sort Rekursif (Ascending)", f"{recursive_asc_duration:.6f} detik"],
-        ["Merge Sort Rekursif (Descending)", f"{recursive_desc_duration:.6f} detik"],
+        ["Merge Sort Iteratif (Ascending, Harga)", f"{iterative_price_duration:.6f} detik"],
+        ["Merge Sort Rekursif (Descending, Harga)", f"{recursive_price_duration:.6f} detik"],
+        ["Merge Sort Iteratif (Ascending, Rating)", f"{iterative_rating_duration:.6f} detik"],
+        ["Merge Sort Rekursif (Descending, Rating)", f"{recursive_rating_duration:.6f} detik"],
     ]
     print("\n=== Perbandingan Waktu Eksekusi ===")
     print(tabulate(table_data, headers=["Algoritma", "Waktu Eksekusi"], tablefmt="grid"))
 
     # Menampilkan grafik perbandingan waktu eksekusi
     algorithms = [
-        'Iterative Ascending',
-        'Iterative Descending',
-        'Recursive Ascending',
-        'Recursive Descending'
+        "Iteratif Ascending (Harga)",
+        "Rekursif Descending (Harga)",
+        "Iteratif Ascending (Rating)",
+        "Rekursif Descending (Rating)"
     ]
     durations = [
-        iterative_asc_duration,
-        iterative_desc_duration,
-        recursive_asc_duration,
-        recursive_desc_duration
+        iterative_price_duration,
+        recursive_price_duration,
+        iterative_rating_duration,
+        recursive_rating_duration
     ]
 
     plt.bar(algorithms, durations, color=['blue', 'orange', 'green', 'red'])
     plt.xlabel('Algorithms')
     plt.ylabel('Execution Time (seconds)')
     plt.title('Comparison of Sorting Algorithms Execution Time')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
     plt.show()
