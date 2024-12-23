@@ -12,16 +12,30 @@ Telkom University Purwokerto
 ---
 
 ## 1. Dasar Teori
-Sorting adalah proses pengurutan elemen data berdasarkan kriteria tertentu, seperti harga atau rating. Sorting mempermudah analisis data dalam aplikasi nyata seperti marketplace, di mana pengguna sering memerlukan pengurutan berdasarkan harga terendah atau rating tertinggi.
+Sorting adalah proses mengatur elemen-elemen dalam suatu koleksi (seperti array atau list) berdasarkan kriteria tertentu, seperti nilai yang meningkat (ascending) atau menurun (descending). Sorting mempermudah proses pencarian, analisis, dan manipulasi data.
 
-**Merge Sort** adalah algoritma sorting berbasis divide-and-conquer yang membagi array menjadi sub-array, mengurutkan setiap sub-array, lalu menggabungkannya kembali. Merge Sort memiliki dua implementasi umum:
-- **Iteratif**: Menggunakan loop untuk mengatur proses pembagian dan penggabungan data.
-- **Rekursif**: Menggunakan pemanggilan fungsi secara rekursif untuk membagi data hingga tersisa satu elemen, kemudian menggabungkannya kembali secara berurutan.
+ Merge Sort
+
+Merge Sort adalah algoritma pengurutan berbasis divide and conquer. Algoritma ini membagi array menjadi sub-array lebih kecil hingga ukuran satu elemen, kemudian menggabungkannya kembali dalam urutan yang benar. Merge Sort memiliki dua varian utama:
+
+- Iteratif: Menggunakan pendekatan berbasis iterasi dengan loop untuk melakukan penggabungan data.
+
+- Rekursif: Menggunakan pemanggilan fungsi secara rekursif untuk membagi dan menggabungkan data.
 
 ---
 
 ## 2. Deskripsi Program
-Program ini membandingkan kinerja Merge Sort Iteratif untuk pengurutan secara ascending berdasarkan harga dan Merge Sort Rekursif untuk pengurutan secara descending berdasarkan rating. Pengguna dapat memasukkan data produk berupa nama, harga, dan rating. Program mencetak hasil pengurutan beserta waktu eksekusi untuk setiap metode.
+Program ini membandingkan kinerja Merge Sort Iteratif untuk pengurutan secara ascending dan descending berdasarkan harga dan Merge Sort Rekursif untuk pengurutan secara ascending dan descending berdasarkan rating. Pengguna dapat memasukkan data produk berupa nama, harga, dan rating. Program mencetak hasil pengurutan beserta waktu eksekusi untuk setiap metode.
+
+Program ini mengimplementasikan dua varian Merge Sort (Iteratif dan Rekursif) untuk mengurutkan data produk berdasarkan dua kriteria:
+
+- Harga produk secara ascending menggunakan Merge Sort Iteratif.
+
+- Harga produk secara descending menggunakan Merge Sort Rekursif.
+
+- Rating produk secara ascending menggunakan Merge Sort Iteratif.
+
+- Rating produk secara descending menggunakan Merge Sort Rekursif.
 
 ---
 
@@ -38,9 +52,25 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 ## 4. Cara Kerja Algoritma pada Code
 
 ### Merge Sort Iteratif (Ascending by Price)
-1. **Inisialisasi**: Program mempersiapkan array sementara untuk menyimpan elemen selama penggabungan.
-2. **Pembagian dan Penggabungan**: Array dibagi menjadi blok berukuran size, yang dimulai dari 1 hingga ukuran array. Blok-blok ini digabungkan menggunakan fungsi merge, yang membandingkan elemen-elemen dari dua sub-array.
-3. **Pengulangan**: Ukuran blok bertambah dua kali lipat pada setiap iterasi hingga seluruh array selesai diurutkan.
+1.Input Data Produk
+
+- Pengguna memasukkan data produk berupa nama, harga, dan rating.
+
+2.Penerapan Merge Sort
+
+- Merge Sort Iteratif dan Rekursif dijalankan untuk dua kriteria pengurutan (harga dan rating).
+
+- Data disalin untuk memastikan keadilan pengukuran.
+
+3.Pengukuran Waktu Eksekusi
+
+- Fungsi time digunakan untuk menghitung durasi eksekusi setiap algoritma.
+
+4.Visualisasi dan Perbandingan
+
+- Hasil pengurutan ditampilkan.
+
+- Waktu eksekusi dibandingkan dalam tabel dan grafik.
 
 ### Merge Sort Rekursif (Descending by Rating)
 1. **Pembagian**: Array dibagi menjadi dua bagian menggunakan rekursi hingga ukuran terkecil (satu elemen).
