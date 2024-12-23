@@ -51,31 +51,34 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 
 ## 4. Cara Kerja Algoritma pada Code
 
-### Merge Sort Iteratif (Ascending by Price)
-1.Input Data Produk
+ # Harga Produk - Ascending (Merge Sort Iteratif)
 
-- Pengguna memasukkan data produk berupa nama, harga, dan rating.
+- Array dibagi menjadi blok kecil berukuran 1.
 
-2.Penerapan Merge Sort
+- Blok-blok digabungkan menggunakan fungsi merge hingga seluruh array terurut secara ascending.
 
-- Merge Sort Iteratif dan Rekursif dijalankan untuk dua kriteria pengurutan (harga dan rating).
+- Proses ini dilakukan secara iteratif dengan ukuran blok yang meningkat secara eksponensial.
 
-- Data disalin untuk memastikan keadilan pengukuran.
+ # Harga Produk - Descending (Merge Sort Rekursif)
 
-3.Pengukuran Waktu Eksekusi
+- Array dibagi menjadi dua bagian hingga hanya tersisa satu elemen di setiap bagian.
 
-- Fungsi time digunakan untuk menghitung durasi eksekusi setiap algoritma.
+- Bagian-bagian tersebut digabungkan kembali secara rekursif menggunakan fungsi merge dalam urutan descending.
 
-4.Visualisasi dan Perbandingan
+- Proses berakhir ketika seluruh array terurut secara descending.
 
-- Hasil pengurutan ditampilkan.
+# Rating Produk - Ascending (Merge Sort Iteratif)
 
-- Waktu eksekusi dibandingkan dalam tabel dan grafik.
+- Prosesnya identik dengan iteratif untuk harga, tetapi kriteria pengurutan didasarkan pada nilai rating.
 
-### Merge Sort Rekursif (Descending by Rating)
-1. **Pembagian**: Array dibagi menjadi dua bagian menggunakan rekursi hingga ukuran terkecil (satu elemen).
-2. **Penggabungan**: Fungsi rekursif merge_recursive menggabungkan dua sub-array dengan membandingkan elemen-elemen dari kiri dan kanan berdasarkan kriteria pengurutan.
-3. **Pengembalian**: Hasil penggabungan dikembalikan ke tingkat rekursi sebelumnya hingga seluruh array selesai diurutkan.
+- Penggabungan dilakukan menggunakan fungsi merge untuk menghasilkan urutan ascending berdasarkan rating.
+
+# Rating Produk - Descending (Merge Sort Rekursif)
+
+- Langkah-langkahnya sama dengan rekursif untuk harga, tetapi kriteria pengurutan adalah rating.
+
+- Hasil akhir berupa array rating yang terurut secara descending.
+
 
 ---
 
