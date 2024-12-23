@@ -69,6 +69,6 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 ### Kesimpulan
 Dalam konteks pengujian yang dilakukan, Merge Sort Rekursif menunjukkan waktu eksekusi yang lebih baik pada dataset kecil. Namun, Merge Sort Iteratif lebih unggul dalam hal efisiensi dan stabilitas pada dataset besar.
 
-Rekomendasi:
--Untuk dataset kecil, Merge Sort Rekursif dapat digunakan untuk kemudahan pemahaman dan implementasi.
--Untuk dataset besar, Merge Sort Iteratif adalah pilihan yang lebih baik karena efisiensi waktu dan penggunaan memori yang lebih baik.
+  -  Untuk dataset kecil, Merge Sort Rekursif dapat digunakan untuk kemudahan pemahaman dan implementasi.
+
+  -  Untuk dataset besar, Merge Sort Iteratif adalah pilihan yang lebih baik karena efisiensi waktu dan penggunaan memori yang lebih baik.
