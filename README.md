@@ -65,8 +65,10 @@ Pendekatan rekursif membagi array menjadi dua bagian hingga ukuran terkecil (sat
 
 - **Merge Sort Rekursif (Descending)**:
   - Implementasi berbasis pemanggilan fungsi rekursif. Array dibagi dua secara terus-menerus hingga menjadi unit
+
+Dalam perbandingan kinerja antara Merge Sort Iteratif dan Merge Sort Rekursif, kedua algoritma memiliki kompleksitas waktu yang sama, yaitu (O(n \log n)), namun kinerja praktisnya dapat bervariasi tergantung pada ukuran dataset. Merge Sort Iteratif cenderung lebih efisien pada dataset besar karena menghindari overhead pemanggilan fungsi yang ada pada Merge Sort Rekursif, yang dapat menyebabkan penurunan kinerja akibat penggunaan stack frame tambahan. Meskipun Merge Sort Rekursif lebih mudah dipahami dan diimplementasikan, terutama untuk dataset kecil, penggunaan memori yang lebih tinggi dan potensi stack overflow pada dataset besar menjadikannya kurang ideal dalam konteks aplikasi nyata. Oleh karena itu, untuk aplikasi yang memerlukan kecepatan dan efisiensi, terutama dalam pengurutan produk di marketplace, Merge Sort Iteratif adalah pilihan yang lebih baik, sedangkan Merge Sort Rekursif lebih sesuai untuk tujuan pendidikan dan pemahaman konsep dasar algoritma.
  
-### Kesimpulan
+## 7. Kesimpulan
 Dalam konteks pengujian yang dilakukan, Merge Sort Rekursif menunjukkan waktu eksekusi yang lebih baik pada dataset kecil. Namun, Merge Sort Iteratif lebih unggul dalam hal efisiensi dan stabilitas pada dataset besar.
 
   -  Untuk dataset kecil, Merge Sort Rekursif dapat digunakan untuk kemudahan pemahaman dan implementasi.
